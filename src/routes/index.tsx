@@ -10,6 +10,17 @@ import Politics from "../pages/user/politics";
 import Society from "../pages/user/society";
 import Sports from "../pages/user/sports";
 import World from "../pages/user/world";
+
+import MilliMajlis from "../pages/user/politics/MiliMajlis";
+import DomesticPolicy from "../pages/user/politics/DomesticPolicy";
+import Karabakh from "../pages/user/politics/Karabakh";
+import ForeignPolicy from "../pages/user/politics/ForeignPolicy"
+import Military from "../pages/user/politics/Military"
+import Diaspora from "../pages/user/politics/Diaspora"
+
+import Detail from "../pages/user/detail"
+
+
 export const Routes = [
   {
     path: "/",
@@ -42,7 +53,11 @@ export const Routes = [
       {
         path: "politics",
         element: <Politics />,
-      }, 
+      },
+      {
+        path: "detail/:id",
+        element: <Detail />,
+      },
       {
         path: "society",
         element: <Society />,
@@ -55,7 +70,30 @@ export const Routes = [
         path: "world",
         element: <World />,
       },
-
+      {
+        path: "majlis",
+        element: <MilliMajlis />,
+      },
+      {
+        path: "domestic",
+        element: <DomesticPolicy />,
+      },
+      {
+        path: "karabakh",
+        element: <Karabakh />,
+      },
+      {
+        path: "foreign",
+        element: <ForeignPolicy />,
+      },
+      {
+        path: "military",
+        element: <Military />,
+      },
+      {
+        path: "diaspora",
+        element: <Diaspora />,
+      },
     ],
   },
 ];

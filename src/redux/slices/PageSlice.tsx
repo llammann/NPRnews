@@ -5,9 +5,11 @@ export interface PageState {
   value: ReportAzNews;
 }
 
+
 export interface NewsItem {
   id: number;
   category: string;
+  categorySecond: string;
   title: string;
   content: string;
   imageUrl: string;
@@ -94,6 +96,7 @@ const initialState: PageState = {
       {
         id: 5,
         category: "politics",
+        categorySecond: "milliMajlis",
         title: "National Assembly Convenes for Important Session",
         content:
           "Members of the Milli Majlis gather to discuss crucial matters. The session addresses pressing issues facing the nation, with debates and decisions that shape the political landscape.",
@@ -107,6 +110,7 @@ const initialState: PageState = {
       {
         id: 6,
         category: "politics",
+        categorySecond: "domesticPolicy",
         title: "Government Unveils New Domestic Policy Initiatives",
         content:
           "Details on the latest policy initiatives aimed at addressing domestic issues. The government introduces measures and strategies to enhance the well-being of citizens and address societal challenges.",
@@ -117,12 +121,68 @@ const initialState: PageState = {
         dislikes: 5,
         views: 380,
       },
-      // Add more news items for other political subcategories
+      {
+        id: 66,
+        category: "politics",
+        categorySecond: "karabakh",
+        title: "Government Unveils New Domestic Policy Initiatives",
+        content:
+          "Details on the latest policy initiatives aimed at addressing domestic issues. The government introduces measures and strategies to enhance the well-being of citizens and address societal challenges.",
+        imageUrl: "https://example.com/politics-image2.jpg",
+        date: "December 16, 2023",
+        time: "11:00 AM",
+        likes: 100,
+        dislikes: 5,
+        views: 380,
+      },
+      {
+        id: 67,
+        category: "politics",
+        categorySecond: "foreignPolicy",
+        title: "Government Unveils New Domestic Policy Initiatives",
+        content:
+          "Details on the latest policy initiatives aimed at addressing domestic issues. The government introduces measures and strategies to enhance the well-being of citizens and address societal challenges.",
+        imageUrl: "https://example.com/politics-image2.jpg",
+        date: "December 16, 2023",
+        time: "11:00 AM",
+        likes: 100,
+        dislikes: 5,
+        views: 380,
+      },
+      {
+        id: 68,
+        category: "politics",
+        categorySecond: "military",
+        title: "Government Unveils New Domestic Policy Initiatives",
+        content:
+          "Details on the latest policy initiatives aimed at addressing domestic issues. The government introduces measures and strategies to enhance the well-being of citizens and address societal challenges.",
+        imageUrl: "https://example.com/politics-image2.jpg",
+        date: "December 16, 2023",
+        time: "11:00 AM",
+        likes: 100,
+        dislikes: 5,
+        views: 380,
+      },
+      {
+        id: 69,
+        category: "politics",
+        categorySecond: "diaspora",
+        title: "Government Unveils New Domestic Policy Initiatives",
+        content:
+          "Details on the latest policy initiatives aimed at addressing domestic issues. The government introduces measures and strategies to enhance the well-being of citizens and address societal challenges.",
+        imageUrl: "https://example.com/politics-image2.jpg",
+        date: "December 16, 2023",
+        time: "11:00 AM",
+        likes: 100,
+        dislikes: 5,
+        views: 380,
+      },
     ],
     economy: [
       {
         id: 7,
         category: "economy",
+        categorySecond: "energy",
         title: "Energy Sector Advances with New Technologies",
         content:
           "Breakthroughs in energy technologies promise a more sustainable future. The advancements contribute to environmental conservation and reshape the landscape of the energy sector.",
@@ -136,6 +196,7 @@ const initialState: PageState = {
       {
         id: 8,
         category: "economy",
+        categorySecond: "finance",
         title: "Finance Minister Announces Budget Highlights",
         content:
           "Key points from the latest budget announcement affecting the economy. The finance minister outlines fiscal policies, budget allocations, and economic forecasts for the upcoming year.",
@@ -146,12 +207,12 @@ const initialState: PageState = {
         dislikes: 7,
         views: 400,
       },
-      // Add more news items for other economic subcategories
     ],
     society: [
       {
         id: 9,
         category: "society",
+        categorySecond: "incident",
         title: "Major Incident Under Investigation",
         content:
           "Authorities probe a significant incident that has raised concerns in society. Investigations are underway to determine the causes and consequences of the incident, addressing public safety and concerns.",
@@ -165,6 +226,7 @@ const initialState: PageState = {
       {
         id: 10,
         category: "society",
+        categorySecond: "health",
         title: "Advancements in Health Sciences",
         content:
           "Groundbreaking discoveries in health sciences promise better healthcare. Scientists and researchers achieve significant milestones in medical science, paving the way for improved treatments and well-being.",
@@ -181,6 +243,7 @@ const initialState: PageState = {
       {
         id: 11,
         category: "sports",
+        categorySecond: "footbal",
         title: "Football Championship Heats Up",
         content:
           "Teams compete fiercely in the ongoing football championship. The tournament showcases intense matches, skillful performances, and passionate fan engagement as teams vie for the championship title.",
@@ -194,6 +257,7 @@ const initialState: PageState = {
       {
         id: 12,
         category: "sports",
+        categorySecond: "individual sports",
         title: "Individual Sports Stars Shine in Global Competitions",
         content:
           "Individual athletes achieve remarkable success in international competitions. The achievements of these sports stars reflect dedication, talent, and determination on the global stage.",
@@ -210,6 +274,7 @@ const initialState: PageState = {
       {
         id: 13,
         category: "culture",
+        categorySecond: "art",
         title: "Cultural Policy Emphasizes Heritage Preservation",
         content:
           "Government initiatives focus on preserving and promoting cultural heritage. Policies and programs are implemented to safeguard cultural traditions, landmarks, and artistic expressions.",
@@ -223,6 +288,7 @@ const initialState: PageState = {
       {
         id: 14,
         category: "culture",
+        categorySecond: "litereature",
         title: "Literary Festival Celebrates Diverse Voices",
         content:
           "Highlights from a literary festival that celebrates diversity in literature. Authors, poets, and literary enthusiasts come together to explore and appreciate a rich tapestry of voices and narratives.",
@@ -239,6 +305,7 @@ const initialState: PageState = {
       {
         id: 15,
         category: "world",
+        categorySecond: "region",
         title: "Regional Leaders Discuss Cooperation",
         content:
           "Leaders from neighboring regions engage in discussions to enhance cooperation. The talks focus on fostering diplomatic ties, addressing shared challenges, and exploring opportunities for collaboration.",
@@ -252,6 +319,7 @@ const initialState: PageState = {
       {
         id: 16,
         category: "world",
+        categorySecond: "interesting",
         title: "Exploring Interesting Stories from Around the Globe",
         content:
           "Discover intriguing stories from different countries that captivate readers. The stories cover a diverse range of topics, offering a global perspective on current events, culture, and human experiences.",
@@ -325,6 +393,7 @@ const initialState: PageState = {
   },
 };
 
+
 export const PageSlice = createSlice({
   name: "counter",
   initialState,
@@ -385,13 +454,38 @@ export const PageSlice = createSlice({
       return state;
     },
 
-    sort:(state,action)=> {
-      console.log(action.payload)
-    }
+    view: (state, action) => {
+      console.log(current(state.value));
+      const category = action.payload.category;
+      console.log(category);
+      const items = current(state.value)[category];
+
+      if (items) {
+        const updatedItems = items.map((news) => {
+          if (news.id === action.payload.id) {
+            // Create a new object with the updated 'dislikes' property
+            return { ...news, views: news.views + 1 };
+          }
+          return news;
+        });
+
+        // Create a new object with the updated items
+        const updatedState = { ...state.value, [category]: updatedItems };
+
+        return { ...state, value: updatedState };
+      }
+
+      // Return the original state if category or items are not found
+      return state;
+    },
+
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { like,dislike,sort } = PageSlice.actions;
+export const { like, dislike, view } = PageSlice.actions;
 
 export default PageSlice.reducer;
+
+
+
